@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<!-- Web Full : Mr. PotatoHead
+Author: Noah Brubaker
+Course: GUI - CSC468 M001
+
+Description:
+    A Mr. PotatoHead web app which gives you a basic potato and allows you to
+    add different items and accessories.
+-->
+
+<html lang="en">
+<!-- The head will load the stylesheets and set meta data.
+     This site uses w3.css style sheets. Any addition css is included in style.css
+-->
+<head>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mr. PotatoHead</title>
+</head>
+
+<!-- The body is where all display elements are defined. It contains:
+
+    header:
+        The title of the web-page and nav-bar with link to Instructions page.
+        A field to the right displays the number of days until the potato harvest
+        in Ireland.
+
+    left-column:
+        The left-column has the main set of options for the editor.
+        These are Save, Load, Reset, Default, Frosh.
+
+    right-column:
+        The Window in the right column contains the available actions for the
+        selected element. Possible actions are Add, Remove, Replace.
+
+    display:
+        The main area where Mr. PotatoHead will be displayed.
+
+    footer:
+        Disclaimer about this being for education purposes only, and that there
+        are no guarantees regarding the functionality or security of the website.
+-->
+<body>
+    <div id="header" class="w3-top w3-bottombar w3-border-dark-gray">
+        <div class="w3-bar w3-white w3-padding">
+            <div class="w3-left w3-hide-small">
+                <a href="potatohead.html" class="w3-bar-item w3-button">
+                    <b>GUI Full - Mr. PotatoHead</b>
+                </a>
+
+                <a href="instructions.html" class="w3-bar-item w3-button">
+                    Instructions
+                </a>
+            </div>
+
+            <div class="w3-right w3-hide-small">
+                <a id="potato-watch" class="w3-bar-item">Days until potato harvest: ???</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="display">
+        <div id="canvas-container">
+            <canvas id="potato-canvas" width="640" height="640">
+
+            </canvas>
+        </div>
+    </div>
+
+    <div id="right-column">
+        <ul class="w3-white w3-topbar w3-leftbar w3-bottombar w3-border-dark-gray">
+            <li><a id="potato-save"    class="w3-button">Save</a></li>
+            <li><a id="potato-load"    class="w3-button">Load</a></li>
+            <li><a id="potato-default" class="w3-button">Default</a></li>
+            <li><a id="potato-frosh"   class="w3-button">Frosh</a></li>
+            <li><a id="potato-reset"   class="w3-button">Reset</a></li>
+        </ul>
+    </div>
+
+
+    <div id="left-column">
+        <ul class="w3-white w3-topbar w3-rightbar w3-bottombar w3-border-dark-gray">
+            <li><a id="potato-element"         class="w3-button">Select Element</a></li>
+            <li><a id="potato-element-add"     class="w3-button">Add</a></li>
+            <li><a id="potato-element-replace" class="w3-button">Replace</a></li>
+            <li><a id="potato-element-remove"  class="w3-button">Remove</a></li>
+        </ul>
+    </div>
+
+
+    <div id="footer">
+
+    </div>
+
+    <script type="text/javascript" src="scripts/canvas-layout.js"></script>
+</body>
+</html>

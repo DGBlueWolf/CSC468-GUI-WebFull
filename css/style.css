@@ -1,0 +1,75 @@
+body{
+    background-color: azure;
+}
+
+#left-column, #right-column, #display{
+    text-align: center;
+    position: absolute;
+    height:                 66vh;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-box-pack: center;
+
+    display: -moz-box;
+    -moz-box-orient: vertical;
+    -moz-box-pack: center;
+
+    display: box;
+    box-orient: vertical;
+    box-pack: center;
+}
+
+#display{
+    width: 100%;
+    height: 90vh;
+    left: 0;
+    top: 64px;
+}
+
+#canvas-container{
+    width: auto;
+    height: 640px;
+    margin-left: 14em;
+    margin-right: 10em;
+    background-color: white;
+    box-shadow: 0 0 10px 10px #4488ac88;
+}
+
+
+#left-column{
+    left:           0;
+    top:         64px;
+    width:       12em;
+}
+
+#right-column{
+    right:         0;
+    top:        64px;
+    width:       8em;
+}
+
+#left-column ul li, #right-column ul li{
+    list-style-type:           none;
+    padding:                    8px;
+    margin-left:             -2.5em;
+    height:                    50px;
+}
+
+#left-column ul li a, #right-column ul li a{
+    width: 90%;
+    border-bottom:  1px solid black;
+}
+
+#potato-save.w3-button:hover{
+    background-color: green !important;
+    color: white !important;
+}
+
+#potato-load.w3-button:hover, #potato-default.w3-button:hover, #potato-frosh.w3-button:hover{
+    background-color: gold !important;
+}
+
+#potato-reset.w3-button:hover{
+    background-color: red !important;
+    color: white !important;
+}
