@@ -91,8 +91,12 @@ Description:
     </div>
 
 
-    <div id="footer">
-
+    <div id="upload-modal" class="modal">
+        <form id="upload-form" action="php/model.php">
+            <p><b>Please Select a Potato XML File</b></p>
+            <input type="file" id="potato-load-file" name="potato"/>
+            <button type="submit" id="submit-potato-file" class="w3-button">Upload</button>
+        </form>
     </div>
 
     <script type="text/javascript" src="scripts/canvas-layout.js"></script>

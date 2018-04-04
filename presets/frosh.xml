@@ -1,0 +1,31 @@
+<potato>
+    <head>
+        <beanie/>
+    </head>
+
+    <eyes>
+        <glasses/>
+    </eyes>
+
+    <nose>
+        <red/>
+    </nose>
+
+    <mouth>
+        <cheeky/>
+    </mouth>
+
+    <feet>
+        <blue/>
+    </feet>
+
+    <leftside>
+        <hand>
+            <shovel/>
+        </hand>
+    </leftside>
+
+    <rightside>
+        <hand/>
+    </rightside>
+</potato>
