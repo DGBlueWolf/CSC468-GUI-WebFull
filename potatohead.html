@@ -6,6 +6,12 @@ Course: GUI - CSC468 M001
 Description:
     A Mr. PotatoHead web app which gives you a basic potato and allows you to
     add different items and accessories.
+
+Bugs:
+    The add function doesn't work correctly in all cases because I assumed there
+    would only be one child which was incorrect based on how I coded add.
+
+    The remove function also doesn't work.
 -->
 
 <html lang="en">
@@ -15,6 +21,7 @@ Description:
 <head>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/imgpos.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -63,10 +70,16 @@ Description:
     </div>
 
     <div id="display">
-        <div id="canvas-container">
-            <canvas id="potato-canvas" width="640" height="640">
-
-            </canvas>
+        <div id="potato-container">
+            <div id="potato-square">
+                <img id="potato-head"  alt="potato head"  >
+                <img id="potato-eyes"  alt="potato eyes"  >
+                <img id="potato-nose"  alt="potato nose"  >
+                <img id="potato-mouth" alt="potato mouth" >
+                <img id="potato-foot"  alt="potato foot"  >
+                <img id="potato-left"  alt="potato left"  >
+                <img id="potato-right" alt="potato right" >
+            </div>
         </div>
     </div>
 
@@ -83,22 +96,47 @@ Description:
 
     <div id="left-column">
         <ul class="w3-white w3-topbar w3-rightbar w3-bottombar w3-border-dark-gray">
-            <li><a id="potato-element"         class="w3-button">Select Element</a></li>
+            <li><a id="potato-element"         class="w3-button">potato</a></li>
             <li><a id="potato-element-add"     class="w3-button">Add</a></li>
-            <li><a id="potato-element-replace" class="w3-button">Replace</a></li>
             <li><a id="potato-element-remove"  class="w3-button">Remove</a></li>
         </ul>
     </div>
 
 
-    <div id="upload-modal" class="modal">
-        <form id="upload-form" action="php/model.php">
-            <p><b>Please Select a Potato XML File</b></p>
-            <input type="file" id="potato-load-file" name="potato"/>
-            <button type="submit" id="submit-potato-file" class="w3-button">Upload</button>
-        </form>
+    <div id="upload-wrapper" class="modal">
+        <div id="upload-modal" class="modal-container">
+            <form id="upload-form" action="" target="fake" method="post" onsubmit="return upload(this);">
+                <p><b>Please Select a Potato XML File</b></p>
+                <input type="file" id="potato-load-file" name="potato"/>
+                <button type="submit" id="submit-potato-file" class="w3-button">Upload</button>
+                <a id='upload-cancel' class='w3-button cancel'>&times;</a>
+            </form>
+        </div>
     </div>
 
-    <script type="text/javascript" src="scripts/canvas-layout.js"></script>
+    <div id="download-wrapper" class="modal">
+        <div id="download-modal" class="modal-container">
+            <div id=download-window class="modal-window">
+                <p><b>Click below for Potato XML file</b></p>
+                <a download="potato.xml" id="downloadlink" class=w3-button>Download</a>
+                <a id='download-cancel' class='w3-button cancel'>&times;</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="selection-wrapper" class="modal">
+        <div id="selection-modal" class="modal-container">
+            <div id="selection-window" class="modal-window">
+                <a id='selection-cancel' class='w3-button cancel'>&times;</a>
+            </div>
+        </div>
+    </div>
+
+    <iframe name="fake"></iframe>
+    <script type="text/javascript" src="scripts/controls.js"></script>
+    <script type="text/javascript" src="scripts/requests.js"></script>
+    <script type="text/javascript" src="scripts/render.js"></script>
+    <script type="text/javascript" src="scripts/modals.js"></script>
+    <script type="text/javascript" src="scripts/main.js"></script>
 </body>
 </html>

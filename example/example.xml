@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<potato>
+    <head>
+        <bowler/>
+    </head>
+
+    <nose>
+        <mustache/>
+    </nose>
+
+    <mouth>
+        <cheeky/>
+    </mouth>
+
+    <feet>
+        <blue/>
+    </feet>
+
+    <leftside>
+        <lefthand>
+            <rod/>
+        </lefthand>
+    </leftside>
+
+</potato>

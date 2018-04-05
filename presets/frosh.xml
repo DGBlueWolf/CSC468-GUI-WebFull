@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <potato>
     <head>
         <beanie/>
@@ -20,12 +21,12 @@
     </feet>
 
     <leftside>
-        <hand>
+        <lefthand>
             <shovel/>
-        </hand>
+        </lefthand>
     </leftside>
 
     <rightside>
-        <hand/>
+        <righthand/>
     </rightside>
 </potato>

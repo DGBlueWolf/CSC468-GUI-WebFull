@@ -1,3 +1,4 @@
+<?xml version="1.0"?>
 <potato>
     <head>
         <bowler/>
@@ -20,10 +21,10 @@
     </feet>
 
     <leftside>
-        <hand/>
+        <lefthand/>
     </leftside>
 
     <rightside>
-        <hand/>
+        <righthand/>
     </rightside>
 </potato>

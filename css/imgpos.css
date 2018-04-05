@@ -1,0 +1,44 @@
+#potato-square{
+    height: 640px;
+    width: 640px;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    margin: auto;
+}
+
+#potato-square img{
+    padding: 0;
+    margin: 0;
+    position: absolute;
+}
+
+#potato-head{
+    top: 20px; left: 210px;
+}
+
+#potato-eyes{
+    top: 170px; left: 210px;
+}
+
+#potato-nose{
+    top: 245px; left: 210px;
+}
+
+#potato-mouth{
+    top: 345px; left: 210px;
+}
+
+#potato-foot{
+    top: 420px; left: 210px;
+}
+
+#potato-left{
+    top: 20px; left: 20px;
+}
+
+#potato-right{
+    top: 20px; left: 430px;
+}
+
+
